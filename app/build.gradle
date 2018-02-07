@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion compile_sdk_version
+    defaultConfig {
+        applicationId "com.wojdor.toasty"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // android
+    compile "com.android.support:appcompat-v7:$android_support_version"
+    compile "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+
+    // kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // anko
+    compile "org.jetbrains.anko:anko:$anko_version"
+
+    // junit
+    testImplementation "junit:junit:$junit_version"
+
+    // runner
+    androidTestImplementation "com.android.support.test:runner:$runner_version"
+
+    // espresso
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
+}
