@@ -1,7 +1,8 @@
 package com.wojdor.toasty.settings
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.support.v7.app.AppCompatActivity
 import com.wojdor.toasty.R
 
 class SettingsActivity : AppCompatActivity(), SettingsContract.View {
@@ -12,5 +13,7 @@ class SettingsActivity : AppCompatActivity(), SettingsContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         presenter = SettingsPresenter(this)
+        // TODO: Use shared preferences
+        PreferenceManager.getDefaultSharedPreferences(this)
     }
 }
