@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="settings_is_true_default">false</bool>
+    <bool name="settings_show_toast_default">false</bool>
 </resources>

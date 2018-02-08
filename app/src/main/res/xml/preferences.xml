@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <CheckBoxPreference
-        android:defaultValue="@bool/settings_is_true_default"
-        android:key="@string/settings_is_true_key"
-        android:summaryOff="@string/settings_is_true_false"
-        android:summaryOn="@string/settings_is_true_true"
-        android:title="@string/settings_is_true_title" />
-</PreferenceScreen>
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_category_general">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="@bool/settings_show_toast_default"
+            android:key="@string/settings_show_toast_key"
+            android:summary="@string/settings_show_toast_summary"
+            android:title="@string/settings_show_toast_title" />
+    </android.support.v7.preference.PreferenceCategory>
+</android.support.v7.preference.PreferenceScreen>

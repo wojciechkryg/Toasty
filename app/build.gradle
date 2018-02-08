@@ -29,6 +29,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$android_support_version"
     compile "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     compile "com.android.support:preference-v7:$android_support_version"
+    compile "com.android.support:preference-v14:$android_support_version"
 
     // kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
