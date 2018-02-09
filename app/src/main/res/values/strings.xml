@@ -3,7 +3,6 @@
 
     <string name="settings_category_general">General</string>
 
-    <string name="settings_show_toast_key" translatable="false">enable</string>
     <string name="settings_show_toast_title">Show toast</string>
     <string name="settings_show_toast_summary">With message content when incoming</string>
 </resources>
