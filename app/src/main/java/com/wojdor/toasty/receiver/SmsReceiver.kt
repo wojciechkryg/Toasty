@@ -11,22 +11,22 @@ import org.jetbrains.anko.longToast
 
 class SmsReceiver : BroadcastReceiver() {
 
-    override fun onReceive(ctx: Context, intent: Intent) {
-        if (isToastEnabled(ctx))
-            showMessages(ctx, Telephony.Sms.Intents.getMessagesFromIntent(intent))
+    override fun onReceive(context: Context, intent: Intent) {
+        if (isToastEnabled(context))
+            showMessages(context, Telephony.Sms.Intents.getMessagesFromIntent(intent))
     }
 
-    private fun isToastEnabled(ctx: Context): Boolean = ctx.defaultSharedPreferences
-            .getBoolean(ctx.getString(R.string.settings_show_toast_key),
-                    ctx.resources.getBoolean(R.bool.settings_show_toast_default))
+    private fun isToastEnabled(context: Context): Boolean = context.defaultSharedPreferences
+            .getBoolean(context.getString(R.string.settings_show_toast_key),
+                    context.resources.getBoolean(R.bool.settings_show_toast_default))
 
-    private fun showMessages(ctx: Context, messages: Array<SmsMessage>) {
+    private fun showMessages(context: Context, messages: Array<SmsMessage>) {
         messages.forEach {
-            showMessage(ctx, it)
+            showMessage(context, it)
         }
     }
 
-    private fun showMessage(ctx: Context, it: SmsMessage) {
-        ctx.longToast(it.messageBody)
+    private fun showMessage(context: Context, it: SmsMessage) {
+        context.longToast(it.messageBody)
     }
 }
